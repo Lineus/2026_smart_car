@@ -1,0 +1,36 @@
+# SolidWorks 文件
+*.sldblk
+*.sldlfp
+*.sldlprt
+*.sldlvs
+*.sldreg
+*.sldset
+*.sldstd
+*.sldtps
+*.sldtwb
+*.prtdot
+*.asmdot
+*.sldprt~
+*.sldasm~
+*.slddrw~
+*.err
+*.tmp
+__history*/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+*.bak
+
+# IDE/编辑器文件
+.vscode/
+.idea/
+*.swp
+*~
+
+# 编译生成文件
+*.o
+*.hex
+*.elf
+build/
+dist/
