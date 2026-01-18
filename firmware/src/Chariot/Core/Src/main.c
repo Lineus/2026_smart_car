@@ -25,7 +25,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <string.h>
 
+#include "gate.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +60,17 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+int door_status=0;
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  if (htim->Instance == TIM2) {
+    static uint8_t data[]="ok2";
+    HAL_UART_Transmit_IT(&huart2,data,3);
+    if (door_status==0)
+      gate_setAngle(Servo2_Pin,135);
+    else
+      gate_setAngle(Servo1_Pin,0);
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -92,7 +105,11 @@ int main(void)
   MX_TIM4_Init();
   MX_USART2_UART_Init();
   MX_CAN_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 
   /* USER CODE END 2 */
 
@@ -100,6 +117,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    char message[]="ok";
+    HAL_UART_Transmit_IT(&huart2, (uint8_t *)message,strlen(message));
+
+    gate_open();
+    HAL_Delay(5000);
+    gate_close();
+    HAL_Delay(5000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
