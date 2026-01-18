@@ -60,17 +60,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int door_status=0;
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-  if (htim->Instance == TIM2) {
-    static uint8_t data[]="ok2";
-    HAL_UART_Transmit_IT(&huart2,data,3);
-    if (door_status==0)
-      gate_setAngle(Servo2_Pin,135);
-    else
-      gate_setAngle(Servo1_Pin,0);
-  }
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -107,19 +97,13 @@ int main(void)
   MX_CAN_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
-
+  gate_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    char message[]="ok";
-    HAL_UART_Transmit_IT(&huart2, (uint8_t *)message,strlen(message));
-
     gate_open();
     HAL_Delay(5000);
     gate_close();

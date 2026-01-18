@@ -18,7 +18,11 @@
 #define Open_angle 135
 
 //定义全局变量，用于中断计
-extern int door_status;//0待开 1待关
+typedef struct {
+    //定义门的状态，0为关闭，1为打开
+    int door_status;
+} Gate_t;
+extern Gate_t gate_data;
 
 void gate_init();
 
