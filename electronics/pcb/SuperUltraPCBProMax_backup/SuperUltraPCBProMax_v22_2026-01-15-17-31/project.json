@@ -1,0 +1,342 @@
+{
+  "schematics": {
+    "174279fe785846b5a1042381a4ac64ec": {
+      "name": "Schematic1",
+      "sheets": [
+        {
+          "name": "P1",
+          "id": 1,
+          "uuid": "d9300c8dc20e4e80955e50a11ca63dc5"
+        }
+      ]
+    }
+  },
+  "pcbs": {
+    "9d2df495afcc4e30bd411cf83e3dbaa9": "PCB1"
+  },
+  "panels": {},
+  "symbols": {
+    "d7a4e03eae7d484ab8de270a7d0e45e6": {
+      "source": "dae013dc9fb24993ad62a51f9f80d9cd|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"特殊器件\"]",
+      "title": "Drawing-Symbol_A4",
+      "version": "1763433565736.0",
+      "type": 20
+    },
+    "6f3a1284eb2445a48484c584156c25e3": {
+      "source": "c1b8b751a29345708c24bcef9a67e2b3|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Power-VCC",
+      "version": "1767178132",
+      "type": 18
+    },
+    "06d09ae7c261453d9adc390d5396267b": {
+      "source": "542d01b8b25e4236a453d7437c3944df|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "Ground-GND",
+      "version": "1767178185",
+      "type": 18
+    },
+    "7555d3a886b448f7a32d59cb5f2c5f21": {
+      "source": "85dcabef9c26486c9725b859aee3deeb|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "STM32F407",
+      "version": "1744300107",
+      "type": 2
+    },
+    "16286ea725a24eda94d306196b08400a": {
+      "source": "2437aa2f39124d199f3f2c9372454892|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[]",
+      "title": "SN65HVD230QDG4",
+      "version": "1765819946",
+      "type": 2
+    },
+    "150aaeb436524d6880285b0ab0571506": {
+      "source": "b7206e45ca174a3ebb7c7d21864cc6a2|0819f05c4eef4c71ace90d822a990e87",
+      "desc": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"传感器\",\"姿态传感器/陀螺仪\"]",
+      "title": "L3GD20",
+      "version": "1735203629",
+      "type": 2
+    }
+  },
+  "footprints": {
+    "c53f57ef82cd4239b17061b93855db07": {
+      "title": "LQFP-100_L14.0-W14.0-P0.50-LS16.0-BL",
+      "source": "62e8108712234219bb9b9811d243cecb|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1741156327",
+      "type": 4,
+      "desc": ";-;LQFP-100(14x14);LQFP-100-EP(14x14);QFP-100;LQFP-100;PQFP-100(14x20);TQFP-100(14x14);LFQFP-100(14x14);BGA-Microstar-100;UFBGA-100;LQFP-144(20x20);SQFP-100;VQFP-100(14x14);VQFP-100;---;,;/;100-LQFP;LQFP-100_14.0x14.0x0.5P;LQFP-100_14.0x14.x0.5P;LQFP-48;LQFP-100_14x14x05P;LQPF-100;LQFP-100_L14.0-W14.0-P0.50-LS16.0-BL;LQFP-100_L14.0-W14.0-P0.50-LS16.0;LQFP100_14x14;LQFP-100_L14.0-W14.0-P0.50-LS16;LQFP-100_L14.0-W14-P0.50-LS16.0-BL;QFP-100_L14.0-W14.0-P0.50-LS16.0;BQFP-100;LQFP144-50P22X22X1.6;LQFP100;LQFP100-14X14X05P;LQFP100-14;MCU_M5;LC-LQFP-100_14x14x05P_1;LQFP80;TQFP100;P-LFQFP100-14x14-0.50;LQFP100-14X14;LFQFP-144(20x20);LQFP-100(14x20);LPG100;LQFP-100_14.0x14.0x0.5P  LQFP100;LQFP-100_L14.0-W14.0-P0.50-LS1;LQFP100(0.5)-14X14-MB9BF004;LQFP-100(10x10);LFQFP100;LC-LQFP-100_14x14x05P;TQFP-100;LQFP100_14X14;TQFP-100_14X14;LQFP(PZ)-100;LQFP100_141X4;SOT-407;LQ100;LQFP100-0.5MM;LQFP-100_14X14;TQFP-100_L14.0-W14.0-P0.50-LS16.0;LQP-100;LQFP10014x14_M;LQFP-10_14X14mm;LQFP-100_14X14mm;P-QFP100-14X14;TQFP-100_14X14mm;248Mhz,LQFP-100;LQFP100_14X14mm;SOT-407-3;QFP-100_14X14mm;,100-LQFP",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"LQFP-100\"]"
+    },
+    "a3cbe09e4670453f92ae1e1c733670d8": {
+      "title": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+      "source": "2e6932429ae745aea190762fe65ff34b|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1766728619",
+      "type": 4,
+      "desc": "SOIC-8;SOP-8;SOIC-8-3.0mm;-;SO-8;TSSOP-8;MSOP-8;NSOIC-8;WSON-8-1;SOIC-8-150mil;SOIJ-8;SOIC-8-Narrow;DIP-8;SOIC-8 150mil;SOIC-Wide-8;SOIC-Narrow-8;SOIC-8L;MSOP-10;SOIC-8-Wide;SOP-14;SOIC-8-EP;DFN-8(3x3);TSOT-5;SOIC-8_N;SOIC-8-300mil;SOIC-8-N;8-SOIC;SOP-8-J;SOIC-8-208mil;SOIC;SOIC-8NB;VSOIC-8_NB;SOIC-8-NB;SOIC-8Narrow;SMB;VSOIC-8;DFN-8(4x4);VFDFN-8;TO-263-6;TSSOP-14;TSSOP-7;SOIC-14;UFDFN-8;VDFN-10;SOIC-8_150mil;8S1;---;SOP-8L;PG-DSO-8;SOIC-8LD;/;8-SOIC (0.154\", 3.90mm Width);SO-8N;DSO-8;SOP-8-300mil;SO-8-150mil;SOIC8_39MM;SOIC-8-6.6mm;SOP-8-150mil;SOP-8_150mil;SOIC-8 Narrow;SOIC-8_3.9x4.9x1.27P;SOIC-14_150mil;SOIC8_53MM;SOIC-8-;SO-8_3.9mm;SON-8;OIC-8_L4.9-W3.9-P1.27-LS6.0-BL;SOIC8-1.27-150MIL;SOP-8_L4.9-W3.9-P1.27-LS6.0;BGA;SOIC-8_L4.9-W3.9-P1.27-LS6.0;SOIC-8_150MIL;SO-8_150mil;SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL;SOIC-8_150mIL;SOIC08P;SOP-8_150MIL;SO8;SOIC8_150MIL;SO-8_150MIL;LC-SOIC-8_150mil;SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL;SOP-8_L4.9-W3.9-P1.27-LS6.0-BL;SO-POWERPAD;SOIC-8_L4.9-W3.9-P1.27-LS6.0-TL;SOIC8_E6_A-socket;FAN73832;PE-110-0060A_SOIC-8;PE-110-0059A_SOIC-8;SOIC127P600X175-8N;集成电路,(贴片)WS3080SOP-8,RoHS;SOIC-8_150mil_1;SOIC8;SOIC127P600-8CL;SOP8;SOP8-225-50;SOIC8_S150;SOIC (D);SOP-8A;SOIC8-150MIL;LC-SOIC-8;so-8;SOP-8_L4.9-W3.9-P1.27-LS6.0-TL;SOP-8 150mil;SOIC-8-150MIL;soic-8_150mil;SOP-8-150MIL;SOP-8(4.9x3.9x1.27);SOC-8_208mil;SO-8-150MIL;SOP-8_3.9x4.9x1.27P;SO8-150MIL;SOIC8(S);8SOIC;PSOP-8;WSON 6;PDIP-8;FCBGA-532(23x23);EMP-8;SOP8-150mil;sop-8;SOIC8-150mil;SO8_150mil;SOIC8-N;SOP8-150MIL;sop-8_l4.9-w3.9;SOT-96-1;SOIC(D)-8;ESOP-8;SOT23-5;sop8;SOIC封装;SOP-8-225-1.27;SOP8-150;SOP8_150mil;SOP8_N;SOIC-8_3.9x4.9mm_P1.27mm;NBSOIC-8;SOP8150mil;SOP-8L-EP;SOIC_8;8 SOIC;soic-8",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"SOIC-8\"]"
+    },
+    "e051ec082ce6495493211db278baeb38": {
+      "title": "LGA-16_L4.0-W4.0-P0.65-BL",
+      "source": "79a2d72077d84926a4102cd2497fc7c4|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1723791984",
+      "type": 4,
+      "desc": ";LGA-16(4x4)",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "custom_tags": "[\"LGA-16\"]"
+    }
+  },
+  "devices": {
+    "6530503a540d4ba39447b1e93d43495e": {
+      "title": "Drawing-Symbol_A4",
+      "attributes": {
+        "@Board Name": "",
+        "@Page Name": "",
+        "@Create Date": "",
+        "@Create Time": "",
+        "@Page Count": "",
+        "@Page No": "",
+        "@Project Name": "",
+        "@Schematic Name": "",
+        "@Update Date": "",
+        "@Update Time": "",
+        "@Assembly Variant": "",
+        "Company": "嘉立创EDA",
+        "Drawed": "",
+        "Page Size": "A4",
+        "Reviewed": "",
+        "Symbol": "d7a4e03eae7d484ab8de270a7d0e45e6",
+        "Version": "V1.0",
+        "Border": "1",
+        "Title Block Position": "3",
+        "Size": "A4",
+        "Width": "1170",
+        "Height": "825",
+        "Region Start": "1",
+        "X Region Count": "6",
+        "Y Region Count": "4",
+        "Blade Width": "10",
+        "Color": "",
+        "Title Block": "1",
+        "Part Number": "",
+        "Name": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "bc676184ec9748d7b372ad543982403a|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1763386843",
+      "custom_tags": "[\"特殊器件\",\"\"]"
+    },
+    "6e791ac8c92846a3ba5112368b86a29c": {
+      "title": "Power-VCC",
+      "attributes": {
+        "Global Net Name": "VCC",
+        "Name": "VCC",
+        "Symbol": "6f3a1284eb2445a48484c584156c25e3",
+        "3D Model": "",
+        "3D Model Title": "",
+        "3D Model Transform": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "b381658129d94456b54f23250ef5a375|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1767178132",
+      "custom_tags": "[\"特殊器件\",\"网络标识\"]"
+    },
+    "03f90601602d41909ca18fc0656861f4": {
+      "title": "Ground-GND",
+      "attributes": {
+        "Global Net Name": "GND",
+        "Name": "GND",
+        "Symbol": "06d09ae7c261453d9adc390d5396267b",
+        "3D Model": "",
+        "3D Model Title": "",
+        "3D Model Transform": "",
+        "Footprint": "",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "9a64ac5790a940f7ae40fc736dc6faff|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1767178184",
+      "custom_tags": "[\"特殊器件\",\"网络标识\"]"
+    },
+    "bd6370d8f74246e4905e9e6ea38f84ce": {
+      "title": "stm32f407",
+      "attributes": {
+        "LCSC Part Name": "stm32f407",
+        "Supplier Part": "C9900004365",
+        "Manufacturer": "",
+        "Manufacturer Part": "stm32f407",
+        "Supplier Footprint": "LQFP-100(14x14)",
+        "JLCPCB Part Class": "扩展库",
+        "Datasheet": "",
+        "Supplier": "LCSC",
+        "Add into BOM": "yes",
+        "Convert to PCB": "yes",
+        "Symbol": "7555d3a886b448f7a32d59cb5f2c5f21",
+        "Designator": "U?",
+        "Footprint": "c53f57ef82cd4239b17061b93855db07",
+        "3D Model": "469e6cc70557486dbd01fd12ff814964",
+        "3D Model Title": "LQFP-100_L14.0-W14.0-H1.4-LS16.0-P0.50",
+        "3D Model Transform": "629.92,629.92,0,0,0,0,0,0,0",
+        "Name": "={Manufacturer Part}",
+        "Description": ""
+      },
+      "description": "",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "3a3023c92e7b4dd4bdd0dfe952bdad23|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1657658413",
+      "custom_tags": "[]"
+    },
+    "58b453f01be548568592a0fcafc7de25": {
+      "title": "SN65HVD230QDG4",
+      "attributes": {
+        "LCSC Part Name": "SN65HVD230QDG4",
+        "Supplier Part": "C1545612",
+        "Manufacturer": "",
+        "Manufacturer Part": "SN65HVD230QDG4",
+        "Supplier Footprint": "SOIC-8",
+        "JLCPCB Part Class": "扩展库",
+        "Datasheet": "https://www.ti.com/cn/lit/gpn/sn65hvd231q",
+        "Supplier": "LCSC",
+        "Add into BOM": "yes",
+        "Convert to PCB": "yes",
+        "Symbol": "16286ea725a24eda94d306196b08400a",
+        "Designator": "U?",
+        "Footprint": "a3cbe09e4670453f92ae1e1c733670d8",
+        "3D Model": "e81d2f7d937b4a6ab1dca543ff5d56a4",
+        "3D Model Title": "SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27",
+        "3D Model Transform": "192.913,236.22,0,0,0,0,0,0,0",
+        "Name": "={Manufacturer Part}",
+        "Description": "SN65HVD230Q 具有待机模式的 3.3V CAN 收发器"
+      },
+      "description": "SN65HVD230Q 具有待机模式的 3.3V CAN 收发器",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "07ff7e9d6a4f4e2abd19ed9cc89068e4|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1654897285",
+      "custom_tags": "[]"
+    },
+    "b588aa6a465040b5aeff7074fec19980": {
+      "title": "L3GD20",
+      "attributes": {
+        "LCSC Part Name": "L3GD20",
+        "Supplier Part": "C15641",
+        "Manufacturer": "ST(意法半导体)",
+        "Manufacturer Part": "L3GD20",
+        "Supplier Footprint": "LGA-16(4x4)",
+        "JLCPCB Part Class": "扩展库",
+        "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20170925/C116866_1506321365621990121.pdf",
+        "Supplier": "LCSC",
+        "Add into BOM": "yes",
+        "Convert to PCB": "yes",
+        "Symbol": "150aaeb436524d6880285b0ab0571506",
+        "Designator": "U?",
+        "Footprint": "e051ec082ce6495493211db278baeb38",
+        "3D Model": "29d0564020bd43c6a1357a4861850bfc",
+        "3D Model Title": "LGA-16_L4.0-W4.0-H1.1-P0.65",
+        "3D Model Transform": "157.48,157.48,0,90,0,0,0,0,0",
+        "Name": "={Manufacturer Part}",
+        "Description": "三轴芯片 陀螺仪 3轴 2000DPS 16LGA MEMS 传感器输出: 数字 测量轴: X, Y, Z 满量程率范围: ± 250°/s, ± 500°/s, ± 2000°/s 电源电压最小值: 2.4V 电源电压最大值: 3.6V 封装类型: LGA 针脚数: 16 灵敏度类型: 8.75m°/s/digit, 17.5m°/s/digit, 70m°/s/digit MSL: MSL 3 - 168小时 SVHC(高度关注物质): No SVHC (19-Dec-2012)"
+      },
+      "description": "三轴芯片 陀螺仪 3轴 2000DPS 16LGA MEMS 传感器输出: 数字 测量轴: X, Y, Z 满量程率范围: ± 250°/s, ± 500°/s, ± 2000°/s 电源电压最小值: 2.4V 电源电压最大值: 3.6V 封装类型: LGA 针脚数: 16 灵敏度类型: 8.75m°/s/digit, 17.5m°/s/digit, 70m°/s/digit MSL: MSL 3 - 168小时 SVHC(高度关注物质): No SVHC (19-Dec-2012)",
+      "tags": {
+        "parent_tag": [],
+        "child_tag": []
+      },
+      "images": [
+        ""
+      ],
+      "source": "fd0b5671ef3a4c7989083b390a2d5231|0819f05c4eef4c71ace90d822a990e87",
+      "version": "1657658410",
+      "custom_tags": "[\"传感器\",\"姿态传感器/陀螺仪\"]"
+    }
+  },
+  "boards": {
+    "Board1": {
+      "schematic": "174279fe785846b5a1042381a4ac64ec",
+      "pcb": "9d2df495afcc4e30bd411cf83e3dbaa9"
+    }
+  },
+  "config": {
+    "title": "SuperUltraPCBProMax",
+    "cbbProject": 0,
+    "defaultSheet": "6530503a540d4ba39447b1e93d43495e",
+    "editorVersion": "2.2.43.4"
+  }
+}
