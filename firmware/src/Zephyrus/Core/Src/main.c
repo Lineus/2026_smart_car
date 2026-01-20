@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "Emm_V5.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,7 +45,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint8_t rxFlag = 0;       // 接收完成标志
+uint8_t rxLen = 0;        // 接收数据长度
+uint8_t receiveData[10];
+uint8_t cal[] = {0x01, 0x06, 0x45, 0x6B};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,7 +59,16 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+  if (huart->Instance == USART1)
+  {
+    rxLen = Size;     // 保存接收到的数据长度
+    rxFlag = 1;       // 设置接收完成标志
+    // 重新启动接收（如果需要持续接收）
+    // HAL_UARTEx_ReceiveToIdle_DMA(&huart1, receiveData, sizeof(receiveData));
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -91,15 +103,58 @@ int main(void)
   MX_DMA_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, receiveData, 10);
+  Emm_V5_Pos_Control(0, 1, 500, 100, 9600, 0, 1);
+  HAL_Delay(100);
+  Emm_V5_Synchronous_motion(0);
+  HAL_Delay(1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
+    if (rxFlag)
+    {
+      // 接收完成，处理数据
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);  // LED闪烁，表示收到数据
+      HAL_Delay(1000);
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+      HAL_Delay(1000);
+      // 这里可以添加串口打印代码
 
+      // 检查接收到的数据
+      if (rxLen >= 4)
+      {
+        // 验证返回数据
+        if (receiveData[0] == 0x01 &&  // 地址
+            receiveData[1] == 0x06 &&  // 功能码
+            receiveData[2] == 0x02)    // 返回码：02成功，E2开环错误，EE其他错误
+        {
+          HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);  // LED常亮
+        }
+        else if (receiveData[1] == 0xFD)
+        {
+          for (int i = 0; i < 8; i++)
+          {
+            HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+            HAL_Delay(500);
+            HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+            HAL_Delay(500);
+
+          }
+          // 开环模式错误
+          // 可以设计错误指示模式，如LED快速闪烁
+        }
+        else if (receiveData[2] == 0xEE)
+        {
+          // 其他错误
+        }
+      }
+
+      rxFlag = 0;  // 清除标志
+    }
+    /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

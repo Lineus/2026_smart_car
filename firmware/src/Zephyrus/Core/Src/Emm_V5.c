@@ -98,7 +98,7 @@ void Emm_V5_Read_Sys_Params(uint8_t addr, SysParams_t s)
   * @param    ctrl_mode：控制模式（对应屏幕上的P_Pul菜单），0是关闭脉冲输入引脚，1是开环模式，2是闭环模式，3是让En端口复用为多圈限位开关输入引脚，Dir端口复用为到位输出高电平功能
   * @retval   地址 + 功能码 + 命令状态 + 校验字节
   */
-void Emm_V5_Modify_Ctrl_Mode(uint8_t addr, bool svF, uint8_t ctrl_mode)
+void Emm_V5_Modify_Ctrl_Mode(uint8_t addr, int svF, uint8_t ctrl_mode)
 {
   uint8_t cmd[16] = {0};
   
