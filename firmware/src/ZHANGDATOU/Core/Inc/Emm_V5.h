@@ -44,6 +44,8 @@ typedef enum {
 *** 注意：每个函数的参数的具体说明，请查阅对应函数的注释说明
 **********************************************************/
 void usart_SendCmd(uint8_t *cmd, uint8_t len);
+void Emm_V5_Global_Speed(int speed1, int speed2, int speed3, int speed4, int acc); //速度模式控制四个电机
+void Emm_V5_Global_Pos(uint8_t dir, uint16_t vel, uint8_t acc, uint32_t clk, int raF, int snF); //位置模式控制四个电机转弯
 void Emm_V5_Reset_CurPos_To_Zero(uint8_t addr); // 将当前位置清零
 void Emm_V5_Reset_Clog_Pro(uint8_t addr); // 解除堵转保护
 void Emm_V5_Read_Sys_Params(uint8_t addr, SysParams_t s); // 读取参数
