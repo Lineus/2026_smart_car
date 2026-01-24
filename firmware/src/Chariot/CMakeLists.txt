@@ -34,7 +34,10 @@ enable_language(C ASM)
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
         Chariot/gate/gate.c
-        Chariot/gate/gate.h)
+        Chariot/gate/gate.h
+        Core/Src/Emm_V5.c
+        Chariot/wheel/wheel.c
+        Chariot/wheel/wheel.h)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
@@ -55,6 +58,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
         Chariot/gate
+        Chariot/wheel
 )
 
 # Add project symbols (macros)

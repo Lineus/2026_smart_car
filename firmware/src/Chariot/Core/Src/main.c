@@ -27,8 +27,9 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
-
+#include "Emm_V5.h"
 #include "gate.h"
+#include "wheel.h"g
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,18 +97,18 @@ int main(void)
   MX_USART2_UART_Init();
   MX_CAN_Init();
   MX_TIM2_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   gate_init();
+  uint8_t speed_cmd[]={0x01,0xFD,0x01,0x05,0xDC,0x00,0x00,0x00,0x7D,0x00,0x00,0x00,0x6B};
+  HAL_UART_Transmit_IT(&huart2,speed_cmd,sizeof(speed_cmd));
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    gate_open();
-    HAL_Delay(5000);
-    gate_close();
-    HAL_Delay(5000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
