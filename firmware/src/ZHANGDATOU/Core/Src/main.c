@@ -103,18 +103,23 @@ int main(void)
     /* USER CODE BEGIN 2 */
     HAL_UARTEx_ReceiveToIdle_DMA(&huart1, receiveData, receiveDataLen);
     HAL_Delay(1000);
-    Emm_V5_Pos_Control(0, 0, 400, 100, 6400, 0, 0);
-    HAL_Delay(6000);
-    Emm_V5_Global_Pos(0, 300, 60, 3400, 0, 0);
-    HAL_Delay(4000);
-    Emm_V5_Pos_Control(0, 0, 400, 100, 19200, 0, 0);
-    HAL_Delay(8000);
-    Emm_V5_Global_Pos(1, 300, 60, 3400, 0, 0);
-    HAL_Delay(4000);
-    Emm_V5_Pos_Control(0, 0, 400, 100, 16000*4/3, 0, 0);
-    HAL_Delay(8000);
-    Emm_V5_Pos_Control(0, 1, 60, 100, 9600*4/3, 0, 0);
-    HAL_Delay(8000);
+    Emm_V5_Pos_Control(0, 0, 600, 150, 6400, 0, 0); //直行
+    HAL_Delay(1900);
+    Emm_V5_Global_Pos(0, 400, 100, 3400, 0, 0); //左转
+    HAL_Delay(1400);
+    Emm_V5_Pos_Control(0, 0, 600, 150, 19200, 0, 0); //直行
+    HAL_Delay(3000);
+    Emm_V5_Global_Pos(1, 400, 100, 3400, 0, 0); //右转
+    HAL_Delay(1400);
+    Emm_V5_Pos_Control(0, 0, 600, 150, 16000 * 4 / 3, 0, 0); //直行
+    HAL_Delay(3100);
+    Emm_V5_Global_Pos(1, 400, 60, 6800, 0, 0); //掉头
+    HAL_Delay(2400);
+    Emm_V5_Pos_Control(0, 0, 600, 150, 9600 * 4 / 3, 0, 0); //直行
+    HAL_Delay(2100);
+    Emm_V5_Global_Pos(1, 400, 100, 3400, 0, 0); //右转
+    HAL_Delay(2000);
+    Emm_V5_Pos_Control(0, 0, 600, 150, 3200*4/3, 0, 0); //直行
     /* USER CODE END 2 */
 
     /* Infinite loop */
