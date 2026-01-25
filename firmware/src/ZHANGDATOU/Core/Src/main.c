@@ -103,6 +103,7 @@ int main(void)
   MX_DMA_Init();
   MX_USART1_UART_Init();
   MX_TIM4_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
     HAL_UARTEx_ReceiveToIdle_DMA(&huart1, receiveData, receiveDataLen);
     HAL_Delay(1000);
