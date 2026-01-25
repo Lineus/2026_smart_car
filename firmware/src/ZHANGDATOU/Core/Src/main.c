@@ -109,7 +109,7 @@ int main(void)
     HAL_Delay(1400);
     Emm_V5_Pos_Control(0, 0, 600, 150, 19200, 0, 0); //直行
     HAL_Delay(3000);
-    Emm_V5_Global_Pos(1, 400, 100, 3400, 0, 0); //右转
+    Emm_V5_Global_Pos(1, 400, 100, 3200, 0, 0); //右转
     HAL_Delay(1400);
     Emm_V5_Pos_Control(0, 0, 600, 150, 16000 * 4 / 3, 0, 0); //直行
     HAL_Delay(3100);
