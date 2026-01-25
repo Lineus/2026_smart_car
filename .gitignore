@@ -27,7 +27,7 @@ Thumbs.db
 .idea/
 *.swp
 *~
-cmake/
+
 
 
 # 编译生成文件
